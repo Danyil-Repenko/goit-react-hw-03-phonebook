@@ -56,7 +56,7 @@ export class App extends Component {
 
   removeContact = e => {
     if (e.target.nodeName === 'BUTTON') {
-      const contactName = e.currentTarget.getAttribute('name');
+      const contactName = e.currentTarget.getAttribute('data-name');
       return this.setState({
         contacts: this.state.contacts.filter(
           contact => contact.name !== contactName
